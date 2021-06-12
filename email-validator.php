@@ -33,7 +33,7 @@ $email = '2175086775@att.txt.net';
 }*/
 
 // Email to check
-//$email = '2175086775@tmomail.net'; 
+$email = '2175086775@tmomail.net'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
