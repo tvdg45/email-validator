@@ -11,7 +11,7 @@ require_once TIMOTHYS_DIGITAL_SOLUTIONS_COMPONENT_FILE_PATH . '/utilities/Verify
 $mail = new VerifyEmail();
 
 // Set the timeout value on stream
-$mail->setStreamTimeoutWait(200000);
+$mail->setStreamTimeoutWait(0);
 
 // Set debug output mode
 $mail->Debug = true; 
