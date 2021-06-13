@@ -32,6 +32,8 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 }
 
+apc_cache_clear();
+
 // Email to check
 try {
 $email = '2175086775@vtext.com'; 
@@ -48,6 +50,8 @@ if($mail->check($email)){
 	
 	echo "fail";
 }
+
+apc_cache_clear();
 
 try {
 // Email to check
@@ -66,6 +70,8 @@ if($mail->check($email)){
 	echo "fail";
 }
 
+apc_cache_clear();
+
 try {
 // Email to check
 $email = '2175086775@mms.att.net'; 
@@ -82,5 +88,7 @@ if($mail->check($email)){
 	
 	echo "fail";
 }
+
+apc_cache_clear();
 
 ?>
