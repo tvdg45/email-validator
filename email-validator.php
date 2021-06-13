@@ -1,4 +1,6 @@
 <?php
+	header("Access-Control-Allow-Origin: *");
+    header("Content-type: application/x-www-form-urlencoded");
 	//Author: Timothy van der Graaff
 	
 	//This constant is for PHP class files.
@@ -21,22 +23,19 @@ $mail->Debugoutput= 'html';
 $mail->setEmailFrom('info@ruff-ruff.com');
 
 // Email to check
-$email = '2175086775@txt.att.net'; 
+$email = '2175086775@att.txt.net'; 
 
 // Check if email is valid and exist
-if($mail->check($email)){ 
+/*if($mail->check($email)){ 
     echo 'Email &lt;'.$email.'&gt; is exist!'; 
 }elseif(verifyEmail::validate($email)){ 
     echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-}
-
-/*clearstatcache();
+}*/
 
 // Email to check
-try {
-$email = '2175086775@vtext.com'; 
+//$email = '2172405157@vtext.com'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
@@ -45,50 +44,6 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-}
-} catch (Exception $e) {
-	
-	echo "fail";
-}
-
-clearstatcache();
-
-try {
-// Email to check
-$email = '2175086775@txt.att.net'; 
-
-// Check if email is valid and exist
-if($mail->check($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is exist!'; 
-}elseif(verifyEmail::validate($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
-}else{ 
-    echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-}
-} catch (Exception $e) {
-	
-	echo "fail";
-}
-
-clearstatcache();
-
-try {
-// Email to check
-$email = '2175086775@mms.att.net'; 
-
-// Check if email is valid and exist
-if($mail->check($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is exist!'; 
-}elseif(verifyEmail::validate($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
-}else{ 
-    echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-}
-} catch (Exception $e) {
-	
-	echo "fail";
-}
-
-clearstatcache();*/
+} 
 
 ?>
