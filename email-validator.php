@@ -32,8 +32,6 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 }
 
-apc_cache_clear();
-
 // Email to check
 try {
 $email = '2175086775@vtext.com'; 
