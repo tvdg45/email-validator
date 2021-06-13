@@ -34,6 +34,9 @@ if($mail->check($email)){
 
 apc_cache_clear();
 
+// Initialize library class
+$mail = new VerifyEmail();
+
 // Set the timeout value on stream
 $mail->setStreamTimeoutWait(0);
 
