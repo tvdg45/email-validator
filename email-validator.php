@@ -24,16 +24,16 @@ $mail->setEmailFrom('info@ruff-ruff.com');
 $email = 'timvdg45@gmail.com'; 
 
 // Check if email is valid and exist
-/*if($mail->check($email)){ 
+if($mail->check($email)){ 
     echo 'Email &lt;'.$email.'&gt; is exist!'; 
 }elseif(verifyEmail::validate($email)){ 
     echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-}*/
+}
 
 // Email to check
-//$email = '2172405157@vtext.com'; 
+$email = '2172405157@vtext.com'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
