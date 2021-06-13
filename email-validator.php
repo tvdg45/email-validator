@@ -51,7 +51,7 @@ if($mail->check($email)){
 
 try {
 // Email to check
-$email = '2175088833@txt.att.net'; 
+$email = '2175086775@txt.att.net'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
@@ -68,7 +68,7 @@ if($mail->check($email)){
 
 try {
 // Email to check
-$email = '2175088833@mms.att.net'; 
+$email = '2175086775@mms.att.net'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
