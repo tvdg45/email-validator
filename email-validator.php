@@ -1,49 +1,29 @@
 <?php
-	header("Access-Control-Allow-Origin: *");
-    header("Content-type: application/x-www-form-urlencoded");
-	//Author: Timothy van der Graaff
-	
-	//This constant is for PHP class files.
-	define('TIMOTHYS_DIGITAL_SOLUTIONS_COMPONENT_FILE_PATH', $_SERVER['DOCUMENT_ROOT']);
-
-// Include library file
-require_once TIMOTHYS_DIGITAL_SOLUTIONS_COMPONENT_FILE_PATH . '/utilities/VerifyEmail.php';
-
-// Initialize library class
-$mail = new VerifyEmail();
-
-// Set the timeout value on stream
-$mail->setStreamTimeoutWait(0);
-
-// Set debug output mode
-$mail->Debug = true; 
-$mail->Debugoutput= 'html'; 
-
-// Set email address for SMTP request
-$mail->setEmailFrom('info@ruff-ruff.com');
-
-// Email to check
-$email = '2175086775@att.txt.net'; 
-
-// Check if email is valid and exist
-/*if($mail->check($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is exist!'; 
-}elseif(verifyEmail::validate($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
-}else{ 
-    echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-}*/
-
-// Email to check
-//$email = '2172405157@vtext.com'; 
-
-// Check if email is valid and exist
-if($mail->check($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is exist!'; 
-}elseif(verifyEmail::validate($email)){ 
-    echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
-}else{ 
-    echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-} 
-
-?>
+			$message = '';
+			
+			$message .= "Do not reply to this message.\r\n";
+			
+			//To send HTML mail, the Content-type header must be set
+			$headers[] = 'MIME-Version: 1.0';
+			$headers[] = 'Content-type: text; charset=iso-8859-1';
+			
+			// Additional headers
+			$headers[] = 'From: Ruff Ruff <info@ruff-ruff.com>';
+			$headers[] = 'Reply-To: info@ruff-ruff.com';
+			$headers[] = 'X-Mailer: PHP/' . phpversion();
+			
+			$vendor_text_email = 'timvdg45@gmail.com,2175086775@vtext.com,2175086775@txt.att.net';
+			
+			//Mail it
+			
+				
+				foreach (explode(',', $vendor_text_email) as $each_vendor_text_email) {
+					
+					if (mail($each_vendor_text_email, 'You have an inquiry from a customer.'), $message, implode("\r\n", $headers))) {
+						
+						break;
+					} else {
+						
+						mail($each_vendor_text_email, 'You have an inquiry from a customer.'), $message, implode("\r\n", $headers));
+					}
+				}
