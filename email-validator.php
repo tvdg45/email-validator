@@ -11,7 +11,7 @@ require_once TIMOTHYS_DIGITAL_SOLUTIONS_COMPONENT_FILE_PATH . '/utilities/Verify
 $mail = new VerifyEmail();
 
 // Set the timeout value on stream
-$mail->setStreamTimeoutWait(0);
+$mail->setStreamTimeoutWait(200);
 
 // Set debug output mode
 $mail->Debug = true; 
@@ -31,9 +31,6 @@ if($mail->check($email)){
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 }
-
-// Set the timeout value on stream
-$mail->setStreamTimeoutWait(0);
 
 // Email to check
 $email = '2172405157@vtext.com'; 
