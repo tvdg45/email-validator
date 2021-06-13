@@ -12,7 +12,7 @@
 			$headers[] = 'Reply-To: info@ruff-ruff.com';
 			$headers[] = 'X-Mailer: PHP/' . phpversion();
 			
-			$vendor_text_email = 'ltrman1996@hotmail.com,2175086775@vtext.com,2175086775@txt.att.net';
+			$vendor_text_email = 'ltrman1996@hotmail.com,2175086775@txt.att.net';
 			
 			//Mail it
 			
@@ -21,9 +21,6 @@
 					
 					if (mail($each_vendor_text_email, ('You have an inquiry from a customer.'), $message, implode("\r\n", $headers))) {
 						
-						break;
-					} else {
 						
-						mail($each_vendor_text_email, ('You have an inquiry from a customer.'), $message, implode("\r\n", $headers));
 					}
 				}
