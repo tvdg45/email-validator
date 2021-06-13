@@ -12,7 +12,7 @@
 			$headers[] = 'Reply-To: info@ruff-ruff.com';
 			$headers[] = 'X-Mailer: PHP/' . phpversion();
 			
-			$vendor_text_email = 'timvdg45@gmail.com,2175086775@vtext.com,2175086775@txt.att.net';
+			$vendor_text_email = 'ltrman1996@hotmail.com,2175086775@vtext.com,2175086775@txt.att.net';
 			
 			//Mail it
 			
