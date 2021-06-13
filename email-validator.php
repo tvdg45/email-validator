@@ -21,7 +21,7 @@ $mail->Debugoutput= 'html';
 $mail->setEmailFrom('info@ruff-ruff.com');
 
 // Email to check
-$email = 'timvdg45@gmail.com'; 
+/*$email = 'timvdg45@gmail.com'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
@@ -47,7 +47,7 @@ if($mail->check($email)){
 } catch (Exception $e) {
 	
 	echo "fail";
-}
+}*/
 
 try {
 // Email to check
