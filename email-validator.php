@@ -32,20 +32,7 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 }
 
-apc_cache_clear();
-
-// Initialize library class
-$mail = new VerifyEmail();
-
-// Set the timeout value on stream
-$mail->setStreamTimeoutWait(0);
-
-// Set debug output mode
-$mail->Debug = true; 
-$mail->Debugoutput= 'html'; 
-
-// Set email address for SMTP request
-$mail->setEmailFrom('info@ruff-ruff.com');
+clearstatcache();
 
 // Email to check
 try {
@@ -64,7 +51,7 @@ if($mail->check($email)){
 	echo "fail";
 }
 
-apc_cache_clear();
+clearstatcache();
 
 try {
 // Email to check
@@ -83,7 +70,7 @@ if($mail->check($email)){
 	echo "fail";
 }
 
-apc_cache_clear();
+clearstatcache();
 
 try {
 // Email to check
@@ -102,6 +89,6 @@ if($mail->check($email)){
 	echo "fail";
 }
 
-apc_cache_clear();
+clearstatcache();
 
 ?>
