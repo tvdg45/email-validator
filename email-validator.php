@@ -21,7 +21,7 @@ $mail->Debugoutput= 'html';
 $mail->setEmailFrom('info@ruff-ruff.com');
 
 // Email to check
-$email = array('timvdg45@gmail.com', '2175086775@txt.att.net'); 
+$email = '2175086775@txt.att.net'; 
 
 // Check if email is valid and exist
 if($mail->check($email)){ 
