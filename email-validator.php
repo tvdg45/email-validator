@@ -42,6 +42,18 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
+}
+
+// Email to check
+$email = '2172405157@txt.att.net'; 
+
+// Check if email is valid and exist
+if($mail->check($email)){ 
+    echo 'Email &lt;'.$email.'&gt; is exist!'; 
+}elseif(verifyEmail::validate($email)){ 
+    echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
+}else{ 
+    echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 } 
 
 ?>
