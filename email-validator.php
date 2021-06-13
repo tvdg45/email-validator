@@ -19,11 +19,11 @@
 				
 				foreach (explode(',', $vendor_text_email) as $each_vendor_text_email) {
 					
-					if (mail($each_vendor_text_email, 'You have an inquiry from a customer.'), $message, implode("\r\n", $headers))) {
+					if (mail($each_vendor_text_email, ('You have an inquiry from a customer.'), $message, implode("\r\n", $headers))) {
 						
 						break;
 					} else {
 						
-						mail($each_vendor_text_email, 'You have an inquiry from a customer.'), $message, implode("\r\n", $headers));
+						mail($each_vendor_text_email, ('You have an inquiry from a customer.'), $message, implode("\r\n", $headers));
 					}
 				}
