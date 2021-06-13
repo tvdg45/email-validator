@@ -32,6 +32,9 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 }
 
+// Set the timeout value on stream
+$mail->setStreamTimeoutWait(0);
+
 // Email to check
 $email = '2172405157@vtext.com'; 
 
