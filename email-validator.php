@@ -33,6 +33,7 @@ if($mail->check($email)){
 }
 
 // Email to check
+try {
 $email = '2172405157@vtext.com'; 
 
 // Check if email is valid and exist
@@ -43,7 +44,12 @@ if($mail->check($email)){
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
 }
+} catch (Exception $e) {
+	
+	echo "fail";
+}
 
+try {
 // Email to check
 $email = '2172405157@txt.att.net'; 
 
@@ -54,8 +60,13 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-} 
+}
+} catch (Exception $e) {
+	
+	echo "fail";
+}
 
+try {
 // Email to check
 $email = '2172405157@mms.att.net'; 
 
@@ -66,6 +77,10 @@ if($mail->check($email)){
     echo 'Email &lt;'.$email.'&gt; is valid, but not exist!'; 
 }else{ 
     echo 'Email &lt;'.$email.'&gt; is not valid and not exist!'; 
-} 
+}
+} catch (Exception $e) {
+	
+	echo "fail";
+}
 
 ?>
